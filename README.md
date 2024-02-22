@@ -1,6 +1,6 @@
-A mobile app built in Jetpack Compose and Kotlin. 
+# A note-taking mobile app built in Jetpack Compose and Kotlin.
 
-Desired outcomes:
+### Desired outcomes:
 
 1. Create, read, update and delete notes with a local room database.
 2. Screen to display notes in a list.
