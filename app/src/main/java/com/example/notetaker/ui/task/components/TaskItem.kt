@@ -56,7 +56,7 @@ fun TaskItem(task: Task, onTaskClicked: (Task) -> Unit) {
             //task and details
                 Row {
                     Text(text = task.title, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                    Spacer(modifier = Modifier.width(6.dp))
+                    Spacer(modifier = Modifier.width(10.dp))
                     // get icon based on completion
                     val checkBoxIcon = if (task.isCompleted) {
                         Icons.Default.CheckCircle
@@ -105,7 +105,7 @@ fun TaskItemPreview() {
             "employers can view the files.", Date(), Date(), isCompleted = false)
 
     // Preview the TaskItem composable
-    TaskItem(task = task, onTaskClicked = {})
+    TaskItem(task = task) {}
 }
 
 

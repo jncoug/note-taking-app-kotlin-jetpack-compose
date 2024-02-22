@@ -2,9 +2,9 @@ package com.example.notetaker.ui.task.components
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.LazyColumn
+
+import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.notetaker.data.Task
@@ -24,8 +24,7 @@ fun TaskList(tasks: List<Task>, onTaskClicked: (Task) -> Unit) {
             .clip(MaterialTheme.shapes.small)
             .padding(4.dp)
     ) {
-        LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 164.dp)
-        ) {
+        LazyColumn {
             items(tasks) { task ->
                 TaskItem(task = task, onTaskClicked = onTaskClicked)
             }
